@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
-    if (username === 'murilo' && password === '123456') {
+    if (username === 'murilo' && password === '12345') {
         req.session.user = username;
         res.status(200).json({ message: 'Login realizado com sucesso' });
     } else {
