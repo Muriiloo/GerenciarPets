@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Menu</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Menu</h1>
+        <p>Último acesso: <span id="ultimoAcesso"></span></p><br>
+        <button onclick="window.location.href='register_interest.html'">Cadastro de Interessados</button>
+        <button onclick="window.location.href='register_pet.html'">Cadastro de Pets</button>
+        <button onclick="window.location.href='adopt.html'">Adotar Pet</button>
+    </div>
+    <script>
+        function getFormattedDate() {
+            var date = new Date();
+            var formattedDate = date.toLocaleString(); 
+            return formattedDate;
+        }
+
+        function updateLastAccessDate() {
+            var lastAccessDate = getFormattedDate();
+            var ultimoAcessoElement = document.getElementById("ultimoAcesso");
+            ultimoAcessoElement.textContent = lastAccessDate;
+        }
+
+        window.onload = function() {
+            updateLastAccessDate();
+        };
+    </script>
+</body>
+</html>
