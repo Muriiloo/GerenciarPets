@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
     
-        if (phone.length !== 10) {
-            alert('O número de telefone deve ter 10 dígitos.');
+        if (phone.length !== 12) {
+            alert('O número de telefone deve ter 12 dígitos.');
             return;
         }
 
